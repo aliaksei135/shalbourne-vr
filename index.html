@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Bare - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container">
+      <div class="text-center mt-5">
+        <h1>Shalbourne Gliding Club Tour</h1>
+        <div
+          id="panorama"
+          style="width: 90%; height: 30rem; margin: auto"
+        ></div>
+        <!-- <p>Bootstrap v5.1.3</p> -->
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+      pannellum.viewer("panorama", {
+        hotSpotDebug: true,
+        default: {
+          firstScene: "lp-flightline",
+          author: "Aliaksei Pilko",
+          sceneFadeDuration: 1000,
+        },
+        scenes: {
+          "clubhouse-inside": {
+            title: "Inside the clubhouse",
+            type: "equirectangular",
+            panorama: "/assets/pano/clubhouse-inside.jpg",
+            hotSpots: [
+              {
+                pitch: -11.350656566878069,
+                yaw: 4.3334681496453005,
+                type: "scene",
+                text: "Out of the clubhouse",
+                sceneId: "clubhouse-outside",
+              },
+              {
+                pitch: -13.608977568924551,
+                yaw: 23.90676844342937,
+                type: "scene",
+                text: "Into the workshop",
+                sceneId: "workshop-inside",
+              },
+              {
+                pitch: -10.690524391517295,
+                yaw: -59.14806823063568,
+                type: "info",
+                text: "Parachute Cupboard",
+              },
+              {
+                pitch: -5.598611530954418,
+                yaw: -186.44701125693305,
+                type: "info",
+                text: "Briefing Room",
+              },
+            ],
+          },
+          "clubhouse-outside": {
+            title: "Outside the clubhouse",
+            type: "equirectangular",
+            panorama: "/assets/pano/clubhouse-outside.jpg",
+            hotSpots: [
+              {
+                pitch: 0.7013908479598481,
+                yaw: 132.2820120504993,
+                type: "scene",
+                text: "Into the clubhouse",
+                sceneId: "clubhouse-inside",
+              },
+              {
+                pitch: -4.592577548382039,
+                yaw: -18.755237681290268,
+                type: "scene",
+                text: "Outside the hangar",
+                sceneId: "hangar-outside",
+              },
+              {
+                pitch: 6.35262542151633,
+                yaw: 162.07241088094213,
+                type: "info",
+                text: "Toilet Block",
+              },
+            ],
+          },
+          "hangar-inside": {
+            title: "Inside the (empty) hangar",
+            type: "equirectangular",
+            panorama: "/assets/pano/hangar-inside.jpg",
+            hotSpots: [
+              {
+                pitch: -0.886593346831603,
+                yaw: 182.2374091554854,
+                type: "scene",
+                text: "Outside the hangar",
+                sceneId: "hangar-outside",
+              },
+              {
+                pitch: -5.720066779681674,
+                yaw: 99.64514207895783,
+                type: "info",
+                text: "Tow out gear",
+              },
+            ],
+          },
+          "hangar-outside": {
+            title: "In front of the hangar",
+            type: "equirectangular",
+            panorama: "/assets/pano/hangar-outside.jpg",
+            hotSpots: [
+              {
+                pitch: -0.2934434957332128,
+                yaw: 245.58830788522403,
+                type: "scene",
+                text: "Into the hangar",
+                sceneId: "hangar-inside",
+              },
+              {
+                pitch: -1.4933994675848261,
+                yaw: -74.42970352962283,
+                type: "scene",
+                text: "Into the maintenance container",
+                sceneId: "red-container",
+              },
+              {
+                pitch: 1.2869302843235364,
+                yaw: -182.11169554948765,
+                type: "scene",
+                text: "Outside the winch",
+                sceneId: "winch-outside",
+              },
+              {
+                pitch: -4.397455978903965,
+                yaw: -2.6019706234776017,
+                type: "scene",
+                text: "Outside the clubhouse",
+                sceneId: "clubhouse-outside",
+              },
+            ],
+          },
+          "k13-inside": {
+            title: "Inside a club K13 glider",
+            type: "equirectangular",
+            panorama: "/assets/pano/k13-inside.jpg",
+            hotSpots: [
+              {
+                pitch: -4.13877217278737,
+                yaw: 96.31847094268011,
+                type: "scene",
+                text: "To the flight line",
+                sceneId: "lp-flightline",
+              },
+            ],
+          },
+          "lp-flightline": {
+            title: "Launch Point - Flightline",
+            type: "equirectangular",
+            panorama: "/assets/pano/lp-flightline.jpg",
+            hotSpots: [
+              {
+                pitch: -1.7456116132958162,
+                yaw: 140.9946219791668,
+                type: "scene",
+                text: "Inside the glider",
+                sceneId: "k13-inside",
+              },
+              {
+                pitch: -3.777210510941945,
+                yaw: -28.69829149926762,
+                type: "scene",
+                text: "Into launch point control",
+                sceneId: "lpc-control",
+              },
+              {
+                pitch: -4.270213516529791,
+                yaw: 51.44539555458465,
+                type: "scene",
+                text: "Off the flight line",
+                sceneId: "lp-parking",
+              },
+              {
+                pitch: 2.9779969828363475,
+                yaw: 238.03143780570832,
+                type: "scene",
+                text: "To the winch",
+                sceneId: "winch-outside",
+              },
+              {
+                pitch: -9.385411893892659,
+                yaw: -128.28669517769987,
+                type: "info",
+                text: "Winch Cable & Drogue Chute",
+              },
+            ],
+          },
+          "lp-parking": {
+            title: "Launch Point - Off Line",
+            type: "equirectangular",
+            panorama: "/assets/pano/lp-parking.jpg",
+            pitch: -12.155636606452484,
+            yaw: 71.85001384716303,
+            hotSpots: [
+              {
+                pitch: -1.2828192332226802,
+                yaw: 65.13131257249022,
+                type: "scene",
+                text: "To the flight line",
+                sceneId: "lp-flightline",
+              },
+              {
+                pitch: 0.1820953321858263,
+                yaw: 96.02589280951914,
+                type: "scene",
+                text: "Into the launch point vehicle",
+                sceneId: "lpc-main",
+              },
+            ],
+          },
+          "lpc-control": {
+            title: "Launch Point Control",
+            type: "equirectangular",
+            panorama: "/assets/pano/lpc-control.jpg",
+            hotSpots: [
+              {
+                pitch: -15.272386103322535,
+                yaw: -87.50515045109734,
+                type: "scene",
+                text: "Into the launch point vehicle",
+                sceneId: "lpc-main",
+              },
+              {
+                pitch: -17.360713778253487,
+                yaw: 320.4031958531233,
+                type: "scene",
+                text: "To the flight line",
+                sceneId: "lp-flightline",
+              },
+              {
+                pitch: -45.120420523766306,
+                yaw: 64.17328559373227,
+                type: "info",
+                text: "Launch Signals",
+              },
+              {
+                pitch: -66.19322067452167,
+                yaw: 46.30684630640728,
+                type: "info",
+                text: "Flying list & log",
+              },
+              {
+                pitch: -37.627816677247566,
+                yaw: 115.87780378543715,
+                type: "info",
+                text: "Electronic Flight Log",
+              },
+            ],
+          },
+          "lpc-main": {
+            title: "Inside the launch point vehicle",
+            type: "equirectangular",
+            panorama: "/assets/pano/lpc-main.jpg",
+            hotSpots: [
+              {
+                pitch: -4.96084875330598,
+                yaw: 187.88443115086295,
+                type: "scene",
+                text: "Into launch point control",
+                sceneId: "lpc-control",
+              },
+              {
+                pitch: -16.80718563257191,
+                yaw: 21.033950530539364,
+                type: "scene",
+                text: "Off the flight line",
+                sceneId: "lp-parking",
+              },
+              {
+                pitch: -16.630742168742977,
+                yaw: 223.92573411805844,
+                type: "info",
+                text: "Parachute Shelves",
+              },
+              {
+                pitch: -48.764608975843586,
+                yaw: 53.23213332735477,
+                type: "info",
+                text: "Glider Ballast & Cushion Storage",
+              },
+            ],
+          },
+          "north-path": {
+            title: "Public Footpath entrance",
+            type: "equirectangular",
+            panorama: "/assets/pano/north-path.jpg",
+            hotSpots: [
+              {
+                pitch: -2.1,
+                yaw: 132.9,
+                type: "scene",
+                text: "Spring House or Dairy",
+                sceneId: "house",
+              },
+            ],
+          },
+          "red-container": {
+            title: "Inside the maintenance container",
+            type: "equirectangular",
+            panorama: "/assets/pano/red-container.jpg",
+            hotSpots: [
+              {
+                pitch: -10.463359086649348,
+                yaw: -12.004115097589635,
+                type: "scene",
+                text: "Outside the hangar",
+                sceneId: "hangar-outside",
+              },
+            ],
+          },
+          "winch-inside": {
+            title: "Inside the winch",
+            type: "equirectangular",
+            panorama: "/assets/pano/winch-inside.jpg",
+            hotSpots: [
+              {
+                pitch: -1.6467554772174617,
+                yaw: 105.57161491388881,
+                type: "scene",
+                text: "To the launch point",
+                sceneId: "lp-flightline",
+              },
+              {
+                pitch: -13.469721516496852,
+                yaw: -69.41306400059231,
+                type: "scene",
+                text: "Outside the winch",
+                sceneId: "winch-outside",
+              },
+            ],
+          },
+          "winch-outside": {
+            title: "Outside the winch",
+            type: "equirectangular",
+            panorama: "/assets/pano/winch-outside.jpg",
+            hotSpots: [
+              {
+                pitch: 0.1912914239784117,
+                yaw: -183.8698849624492,
+                type: "scene",
+                text: "To the launch point",
+                sceneId: "lp-flightline",
+              },
+              {
+                pitch: 0.38077939604684996,
+                yaw: 251.10346433644247,
+                type: "scene",
+                text: "Into the winch",
+                sceneId: "winch-inside",
+              },
+              {
+                pitch: -1.6217202351153959,
+                yaw: 29.260367090749437,
+                type: "scene",
+                text: "Outside the hangar",
+                sceneId: "hangar-outside",
+              },
+            ],
+          },
+          "workshop-inside": {
+            title: "Inside the workshop",
+            type: "equirectangular",
+            panorama: "/assets/pano/workshop-inside.jpg",
+            hotSpots: [
+              {
+                pitch: -5.8973579958222615,
+                yaw: -67.8367294857297,
+                type: "scene",
+                text: "Into the clubhouse",
+                sceneId: "clubhouse-inside",
+              },
+              {
+                pitch: -9.091183364225703,
+                yaw: -354.34327070991566,
+                type: "info",
+                text: "Battery Charging Station",
+              },
+              {
+                pitch: -1.4848522095485857,
+                yaw: -107.23008172939407,
+                type: "info",
+                text: "First Aid Station",
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
